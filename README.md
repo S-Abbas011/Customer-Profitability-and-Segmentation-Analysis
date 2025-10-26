@@ -1,11 +1,12 @@
 # Customer-Profitability-and-Segmentation-Analysis
 #Business Question:
-'''Which customer segments contribute most to overall profit, and how do their purchase behaviors differ by region and product category?
+```Which customer segments contribute most to overall profit, and how do their purchase behaviors differ by region and product category?
 SQL Task:
 •	Join Orders, Customers, and Products tables.
 •	Compute Total_Sales, Profit, and Order_Count per customer.
 •	Rank customers by profitability.
-•	Classify customers into tiers: Platinum, Gold, Silver (using window functions).'''
+•	Classify customers into tiers: Platinum, Gold, Silver (using window functions).
+```
 
 
 ```SQL
