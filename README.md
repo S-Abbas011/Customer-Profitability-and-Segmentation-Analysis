@@ -26,7 +26,7 @@ select customer_name,segment,region,total_orders,total_sales,total_profit,
 rank() over(order by total_profit) as ranked_profit
 from customer_segment
 )
-select customer_name,total_sales, total_profit,total_orders,ranked_profit,
+select customer_name,segment,total_sales, total_profit,total_orders,ranked_profit,
 case when ranked_profit >= 700 then 'Platinium'
 when ranked_profit >= 400 and ranked_profit <= 700 then 'Gold'
 when ranked_profit >= 1 and ranked_profit <= 400 then 'silver'
