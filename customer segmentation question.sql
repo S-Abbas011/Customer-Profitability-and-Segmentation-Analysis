@@ -1,4 +1,5 @@
-
+#SOLUTION 
+  
 With customer_segment as(
 select c.customer_name,c.segment,c.region,p.category,sum(s.sales) as total_Sales,
 sum(s.profit) as total_profit,
@@ -22,6 +23,7 @@ when ranked_profit >= 1 and ranked_profit <= 400 then 'silver'
 end as customer_tiers
 from ranked_Cust 
 order by ranked_profit 
+
 
 
 
