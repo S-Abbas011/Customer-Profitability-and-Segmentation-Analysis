@@ -2,13 +2,13 @@ Customer Profitability and Segmentation Analysis
 Business Question:
 Which customer segments contribute most to overall profit, and how do their purchase behaviors differ by region and product category?
 SQL Task:
-•	Join Orders, Customers, and Products tables.
-•	Compute Total_Sales, Profit, and Order_Count per customer.
-•	Rank customers by profitability.
-•	Classify customers into tiers: Platinum, Gold, Silver (using window functions).
+â€¢	Join Orders, Customers, and Products tables.
+â€¢	Compute Total_Sales, Profit, and Order_Count per customer.
+â€¢	Rank customers by profitability.
+â€¢	Classify customers into tiers: Platinum, Gold, Silver (using window functions).
 Power BI Visualization:
-•	Customer Profitability Dashboard
+â€¢	Customer Profitability Dashboard
 o	KPI cards: Total Profit, Avg Profit/Customer
 o	TreeMap by Customer Segment and Region
 o	Clustered bar for top 10 customers
-o	Slicer for time and region
+o	Slicer forÂ timeÂ andÂ region
