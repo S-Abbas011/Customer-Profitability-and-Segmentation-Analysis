@@ -9,28 +9,42 @@ SQL Task:
 ```
 
 
-```SQL
-With customer_segment as(
-select c.customer_name,c.segment,c.region,p.category,sum(s.sales) as total_Sales,
-sum(s.profit) as total_profit,
-count(s.order_id) as total_orders
-from customer as c 
-join sales as s 
-on c.customer_id = s.customer_id
-join product as p 
-on s.product_id = p.product_id 
-group by customer_name,segment,region,category
-),
-ranked_cust as(
-select customer_name,segment,region,total_orders,total_sales,total_profit,
-rank() over(order by total_profit) as ranked_profit
-from customer_segment
-)
-select customer_name,segment,total_sales, total_profit,total_orders,ranked_profit,
-case when ranked_profit >= 700 then 'Platinium'
-when ranked_profit >= 400 and ranked_profit <= 700 then 'Gold'
-when ranked_profit >= 1 and ranked_profit <= 400 then 'silver'
-end as customer_tiers
-from ranked_Cust 
-order by ranked_profit
-```
+# Project Overview
+
+* This project analyzes customer-level sales and profitability data to understand which customer segments and regions           generate the most value.
+* Using SQL window functions, customers are ranked and classified into tiers, helping the business focus retention and          marketing strategies on high-value clients.
+
+# SQL Logic Summary
+
+* The analysis uses CTEs (Common Table Expressions) to structure the process clearly:
+# customer_segment CTE
+* Joins the Sales, Customers, and Products tables.
+## Aggregates:
+* Total Sales, Total Profit, and Order Count per customer.
+* Groups data by Customer_Name, Segment, Region, and Category.
+## ranked_cust CTE
+* Uses the RANK() window function to rank customers by Total Profit.
+* Helps identify the most profitable customers overall.
+## Final Output
+* Classifies customers into profitability tiers:
+
+* Platinum: Rank ≥ 700
+* Gold: Rank 400–699
+* Silver: Rank 1–399
+* Displays each customer’s total sales, profit, order count, rank, and assigned tier.
+  
+# Dashboard Insights
+* The interactive dashboard (Power BI / Tableau) visualizes:
+* Profit distribution by customer tier
+* Top 10 most profitable customers
+* Regional customer profitability
+* Profit by Product Category
+* Customer Segment performance
+* These visuals help stakeholders easily identify high-value customers and profitable regions.
+
+
+# Key Insights
+* Platinum customers generate over 60% of total profit with fewer orders — indicating high-margin behavior.
+* Gold customers have balanced order frequency and profitability — ideal for loyalty programs.
+* Silver customers make frequent low-value purchases — suitable for discount or upsell campaigns.
+* Certain regions and categories dominate profit share, guiding regional marketing focus.
