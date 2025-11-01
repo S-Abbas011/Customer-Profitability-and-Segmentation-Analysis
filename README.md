@@ -14,10 +14,10 @@ SQL Task:
 * This project analyzes customer-level sales and profitability data to understand which customer segments and regions           generate the most value.
 * Using SQL window functions, customers are ranked and classified into tiers, helping the business focus retention and          marketing strategies on high-value clients.
 
-# SQL Logic Summary
+## SQL Logic Summary
 
 * The analysis uses CTEs (Common Table Expressions) to structure the process clearly:
-# customer_segment CTE
+## customer_segment CTE
 * Joins the Sales, Customers, and Products tables.
 ## Aggregates:
 * Total Sales, Total Profit, and Order Count per customer.
@@ -33,7 +33,7 @@ SQL Task:
 * Silver: Rank 1–399
 * Displays each customer’s total sales, profit, order count, rank, and assigned tier.
   
-# Dashboard Insights
+## Dashboard Insights
 * The interactive dashboard (Power BI / Tableau) visualizes:
 * Profit distribution by customer tier
 * Top 10 most profitable customers
@@ -43,7 +43,7 @@ SQL Task:
 * These visuals help stakeholders easily identify high-value customers and profitable regions.
 
 
-# Key Insights
+## Key Insights
 * Platinum customers generate over 60% of total profit with fewer orders — indicating high-margin behavior.
 * Gold customers have balanced order frequency and profitability — ideal for loyalty programs.
 * Silver customers make frequent low-value purchases — suitable for discount or upsell campaigns.
