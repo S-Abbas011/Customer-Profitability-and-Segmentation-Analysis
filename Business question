@@ -1,5 +1,5 @@
-Customer Profitability and Segmentation Analysis
-Business Question:
+## Customer Profitability and Segmentation Analysis
+## Business Question:
 Which customer segments contribute most to overall profit, and how do their purchase behaviors differ by region and product category?
 SQL Task:
 •	Join Orders, Customers, and Products tables.
@@ -12,3 +12,4 @@ o	KPI cards: Total Profit, Avg Profit/Customer
 o	TreeMap by Customer Segment and Region
 o	Clustered bar for top 10 customers
 o	Slicer for time and region
+
